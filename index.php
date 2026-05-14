@@ -37,7 +37,6 @@ if (!isset($_COOKIE["ultimo_acesso"])) {
         <nav>
             <?php require_once("./menu.php");?>
         </nav>
-        <small>Último acesso: <?= $_COOKIE["ultimo_acesso"] ?? "Primeiro acesso" ?></small>
     </header>
     <main>
     <?php

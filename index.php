@@ -19,7 +19,6 @@ require_once "./controller/UsuarioController.php";
 use App\Controller\TransacaoController as Transacao;
 use App\Controller\UsuarioController as UsuarioCtrl;
 
-// Verifica se existe um cookie de acesso, senão cria um. Uso de Cookie conforme critério.
 if (!isset($_COOKIE["ultimo_acesso"])) {
     setcookie("ultimo_acesso", date("d/m/Y H:i:s"), time() + 3600, "/");
 }
@@ -40,7 +39,6 @@ if (!isset($_COOKIE["ultimo_acesso"])) {
     </header>
     <main>
     <?php
-        // Estrutura de Controle (match) e uso de GET
         $page = $_GET["p"] ?? "home";
         match($page) {
             "home" => require_once("./view/home.php"),
@@ -53,6 +51,12 @@ if (!isset($_COOKIE["ultimo_acesso"])) {
     </main>
     <footer>
         <small>Copyright &copy; - <?= date("Y") ?> | Sistema de Pagamentos</small>
+    // Ellison Erik      RGM 38447355
+    // Marcelo da Silva  RGM 43714625
+    // Emanuel Corrêa    RGM 33908389
+    // Matheus Gustavo   RGM 38988879
+    // Eudes Nunes       RGM 35786574
+    // Luiz Henrique     RGM 40931927
     </footer>
 </body>
 </html>

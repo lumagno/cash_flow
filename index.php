@@ -52,11 +52,13 @@ if (!isset($_COOKIE["ultimo_acesso"])) {
     <footer>
         <small>Copyright &copy; - <?= date("Y") ?> | Sistema de Pagamentos</small>
     </footer>
-    // Ellison Erik      RGM 38447355
-    // Marcelo da Silva  RGM 43714625
-    // Emanuel Corrêa    RGM 33908389
-    // Matheus Gustavo   RGM 38988879
-    // Eudes Nunes       RGM 35786574
-    // Luiz Henrique     RGM 40931927
+    <!--
+    Ellison Erik     RGM 38447355
+    Marcelo da Silva RGM 43714625
+    Emanuel Corrêa   RGM 33908389
+    Matheus Gustavo  RGM 38988879
+    Eudes Nunes      RGM 35786574
+    Luiz Henrique    RGM 40931927
+    --> 
 </body>
 </html>

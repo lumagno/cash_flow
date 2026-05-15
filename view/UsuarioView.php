@@ -4,7 +4,6 @@ namespace App\View;
 class UsuarioView {
     public static function formulario(?string $msg, string $tipoMsg = 'erro') : void {
         if ($msg !== null): 
-            // Usa a classe CSS correta dependendo do sucesso ou erro
             $classe = ($tipoMsg === 'sucesso') ? 'alert' : 'erro';
         ?>
             <div class="<?= $classe ?>">

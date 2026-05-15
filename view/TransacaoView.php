@@ -17,7 +17,6 @@ class TransacaoView {
             </thead>
             <tbody>
                 <?php 
-                // Estrutura de Laço (foreach) exigida
                 foreach($transacoes as $t): 
                     if($t['tipo'] === 'entrada') {
                         $saldo += $t['valor'];

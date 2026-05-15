@@ -11,9 +11,8 @@ class TransacaoController {
     
     public static function cadastrar() : void {
         $msg = $_SESSION['msg'] ?? null;
-        unset($_SESSION['msg']); // Limpa a mensagem da sessão após pegar
+        unset($_SESSION['msg']); 
 
-        // Estrutura de Controle e POST
         if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST["descricao"])) {
             $descricao = Util::preparaTexto($_POST["descricao"]);
             $valor = (float) $_POST["valor"];
@@ -23,7 +22,6 @@ class TransacaoController {
                 $transacao = Transacao::criar(null, $descricao, $valor, $tipo);
                 $id = TransacaoDao::cadastrar($transacao);
                 
-                // Grava na sessão (requisito)
                 $_SESSION['msg'] = "Transação cadastrada com sucesso! ID: " . $id;
                 
                 header("Location: ?p=cad");

@@ -23,7 +23,6 @@ class Usuario {
     public function getEmail(): string { return $this->email; }
     public function getSenha(): string { return $this->senha; }
 
-    // Validações rigorosas como no Cliente.php do professor
     public function setNome(string $nome) : void {
         if (empty($nome) || strlen($nome) < 3) {
             throw new \InvalidArgumentException("O nome deve ter pelo menos 3 caracteres.");
@@ -42,7 +41,6 @@ class Usuario {
         if (strlen($senha) < 6) {
             throw new \InvalidArgumentException("A senha deve ter no mínimo 6 caracteres.");
         }
-        // Criptografando a senha por segurança
         $this->senha = password_hash($senha, PASSWORD_DEFAULT);
     }
 }

@@ -19,7 +19,6 @@ abstract class UsuarioDao {
             $sql->execute();
             return (int) $pdo->lastInsertId();
         } catch (PDOException $e) {
-            // Verifica se o erro é de e-mail duplicado (código 23000 do MySQL)
             if ($e->getCode() == 23000) {
                 throw new \Exception("Este e-mail já está cadastrado no sistema.");
             }

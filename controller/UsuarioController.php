@@ -18,10 +18,9 @@ class UsuarioController {
             $nome = Util::preparaTexto($_POST["nome"]);
             $email = Util::preparaTexto($_POST["email"]);
             $senha = $_POST["senha"];
-            $confSenha = $_POST["conf_senha"]; // Campo baseado no formulario.php do professor
+            $confSenha = $_POST["conf_senha"];
 
             try {
-                // Validação de confirmação de senha
                 if ($senha !== $confSenha) {
                     throw new Exception("As senhas digitadas não conferem.");
                 }
@@ -30,13 +29,13 @@ class UsuarioController {
                 UsuarioDao::cadastrar($usuario);
                 
                 $_SESSION['msg_user'] = "Usuário cadastrado com sucesso!";
-                $_SESSION['tipo_msg'] = "sucesso"; // Para exibir a caixa verde
+                $_SESSION['tipo_msg'] = "sucesso";
                 
                 header("Location: ?p=cad_user");
                 exit;
             } catch (Exception $e) {
                 $msg = $e->getMessage();
-                $tipoMsg = "erro"; // Para exibir a caixa vermelha
+                $tipoMsg = "erro";
             }
         }
         UsuarioView::formulario($msg, $tipoMsg);

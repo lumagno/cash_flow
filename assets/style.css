@@ -3,8 +3,7 @@
 body { font-family: Arial, sans-serif; 
        background-color: #f0f0f0; }
 
-header, nav, main, footer { 
-                            max-width: 80vw; 
+header, nav, main, footer { max-width: 80vw; 
                             margin: 0 auto; 
                             padding: 10px; }
 
